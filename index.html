@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arendal-museet — historiske fotografier</title>
+</head>
+<body>
+  <div id="loading">
+    <div class="panel">
+      <h1>Arendal-museet</h1>
+      <p class="subtitle">Historiske fotografier fra Nasjonalbiblioteket</p>
+      <p id="loading-status">Henter bilder &hellip;</p>
+    </div>
+  </div>
+
+  <div id="blocker" class="hidden">
+    <div class="panel">
+      <h1>Arendal-museet</h1>
+      <p class="subtitle">Historiske fotografier fra Nasjonalbiblioteket</p>
+      <p class="cta" id="blocker-cta">Klikk for å gå inn i museet</p>
+      <p class="keys">WASD / piltaster &mdash; gå &nbsp;&middot;&nbsp; Mus &mdash; se deg rundt &nbsp;&middot;&nbsp; E / klikk &mdash; se nærmere på et bilde &nbsp;&middot;&nbsp; Esc &mdash; meny</p>
+    </div>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div id="crosshair"></div>
+    <div id="hint" class="hidden">E &mdash; se nærmere</div>
+    <div id="toast" class="hidden"></div>
+    <div id="help">WASD &mdash; gå &nbsp;&middot;&nbsp; E &mdash; se nærmere &nbsp;&middot;&nbsp; Esc &mdash; meny</div>
+  </div>
+
+  <div id="overlay" class="hidden">
+    <div id="overlay-content">
+      <img id="overlay-img" alt="" />
+      <div id="overlay-info">
+        <h2 id="overlay-title"></h2>
+        <p id="overlay-meta"></p>
+        <p id="overlay-category"></p>
+        <a id="overlay-link" href="#" target="_blank" rel="noopener">Se hos Nasjonalbiblioteket &rarr;</a>
+        <button id="overlay-close">Tilbake til museet</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
