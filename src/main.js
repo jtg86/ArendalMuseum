@@ -31,7 +31,13 @@ async function init() {
   scene.background = new THREE.Color(0xdfe8f0);
   const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.05, 120);
 
-  const manifest = await (await fetch('/data/manifest.json')).json();
+  // BASE_URL gjør at museet også kan serveres under en understi (f.eks. /museum/)
+  const base = import.meta.env.BASE_URL;
+  const manifest = await (await fetch(`${base}data/manifest.json`)).json();
+  for (const item of manifest.items) {
+    item.src = base + item.src.replace(/^\//, '');
+    item.src512 = base + item.src512.replace(/^\//, '');
+  }
   const layout = buildLayout(manifest.periods);
 
   scene.add(buildChurch(layout));
