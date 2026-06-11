@@ -2,6 +2,8 @@
 
 Et 3D fotomuseum der du går rundt i en hvit sørlandskirke og ser historiske fotografier av Arendal, hentet fra Nasjonalbibliotekets åpne API.
 
+![Skjermbilde av Arendal-museet](docs/screenshot.png)
+
 76 public domain-bilder er organisert i tre saler etter tidsperiode (før 1905, 1905–1949, etter 1950), gruppert på veggene etter kategori: havn og sjøfart, kirke og Tyholmen, gater og bygninger, byen og utsikt, og mennesker.
 
 ## Forutsetninger
