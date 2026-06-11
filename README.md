@@ -32,7 +32,7 @@ npm run dev
 
 - **WASD / piltaster** — gå
 - **Mus** — se deg rundt
-- **E / klikk** — se nærmere på et bilde
+- **E / klikk** — se nærmere på et bilde (E lukker også visningen)
 - **Esc** — meny / lukk bildevisning
 
 ## Tech stack

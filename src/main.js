@@ -99,7 +99,21 @@ async function init() {
     if (player.isLocked) tryOpenHovered();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.code === 'KeyE' && player.isLocked) tryOpenHovered();
+    if (e.code === 'KeyE') {
+      if (overlay.isOpen) {
+        overlay.close(true);
+        // Tastetrykk regnes som brukeraktivering, men hvis nettleseren likevel
+        // nekter å gjenopprette pekerlåsen, fall tilbake til blokkeren.
+        setTimeout(() => {
+          if (!player.isLocked && !overlay.isOpen) {
+            blockerCta.textContent = 'Klikk for å fortsette';
+            blockerEl.classList.remove('hidden');
+          }
+        }, 300);
+      } else if (player.isLocked) {
+        tryOpenHovered();
+      }
+    }
     if (e.code === 'Escape' && overlay.isOpen) overlay.close(false);
   });
 
